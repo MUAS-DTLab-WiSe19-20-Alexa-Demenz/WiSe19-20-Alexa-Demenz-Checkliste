@@ -1,0 +1,301 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "pflege tado",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CreateListIntent",
+                    "slots": [
+                        {
+                            "name": "list_type",
+                            "type": "LIST_TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "lege eine neue {list_type} an",
+                        "neue {list_type} anlegen",
+                        "lege eine {list_type} liste an",
+                        "lege eine {list_type} an"
+                    ]
+                },
+                {
+                    "name": "WhatsOnThisListIntent",
+                    "slots": [],
+                    "samples": [
+                        "Wie sieht meine Liste aus",
+                        "Was ist noch auf der Liste",
+                        "Was steht auf der Liste"
+                    ]
+                },
+                {
+                    "name": "DeleteListIntent",
+                    "slots": [],
+                    "samples": [
+                        "Die Liste entfernen",
+                        "Die Liste Löschen",
+                        "Lösche die Liste"
+                    ]
+                },
+                {
+                    "name": "AddToListIntent",
+                    "slots": [
+                        {
+                            "name": "elementName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Füge {elementName} in die Liste ein",
+                        "Hänge {elementName} an die Liste an",
+                        "Füge {elementName} hinzu",
+                        "{elementName} zur Liste hinzufügen",
+                        "Füge {elementName} zur Liste hinzu",
+                        "{elementName} der Liste hinzufügen",
+                        "füge {elementName} der Liste hinzu"
+                    ]
+                },
+                {
+                    "name": "CheckElementIntent",
+                    "slots": [
+                        {
+                            "name": "elementName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "hake {elementName} ab",
+                        "streiche {elementName} von der Liste",
+                        "{elementName} wurde gemacht",
+                        "Ich habe {elementName} erledigt"
+                    ]
+                },
+                {
+                    "name": "SendListMailIntent",
+                    "slots": [],
+                    "samples": [
+                        "Ich möchte die Liste per Mail bekommen",
+                        "Ich möchte die Liste als EMail bekommen",
+                        "Schicke mir eine Email mit der Liste",
+                        "Sende mir meine Liste",
+                        "Die Liste per Mail verschicken",
+                        "Die Liste per Mail versenden",
+                        "Schicke mir meine Liste",
+                        "Schicke mir die Liste",
+                        "Sende die Liste per Mail"
+                    ]
+                },
+                {
+                    "name": "WhatsFinishedOnThisListIntent",
+                    "slots": [],
+                    "samples": [
+                        "was wurde schon gemacht",
+                        "Was wurde schon erledigt",
+                        "Was habe ich heute schon erledigt"
+                    ]
+                },
+                {
+                    "name": "WhatsToDoOnThisListIntent",
+                    "slots": [],
+                    "samples": [
+                        "aufgaben für heute",
+                        "was ist heute noch zu erledigen",
+                        "was ist heute noch zu machen",
+                        "lese mir nicht abgehakte aufgaben vor",
+                        "was für aufgaben sind noch nicht abgehakt",
+                        "lese mir noch nicht erledigte aufgaben vor",
+                        "lese mir die aufgaben vor die noch nciht erledigt sind",
+                        "was gibt es noch zu tun",
+                        "was für aufgaben sind noch offen",
+                        "was ist noch nicht erledigt worden",
+                        "welche aufgaben gibt es noch",
+                        "welche aufgaben muss ich noch amchen",
+                        "was gibt es noch für aufgaben",
+                        "was steht noch an",
+                        "was ist noch zu erledigen"
+                    ]
+                },
+                {
+                    "name": "SendWeekListMailIntent",
+                    "slots": [],
+                    "samples": [
+                        "Schicke mir eine Mail mit meinem Wochenbericht",
+                        "Ich möchte meine Wochenbericht per Mail",
+                        "Ich möchte meinen Wochenbericht",
+                        "Schicke mir einen Wochenbericht per Mail",
+                        "Schicke mir eine Wochenübersicht per Mail",
+                        "Schicke mir eine Wochenübersicht",
+                        "Schicke mir die Liste der Woche",
+                        "Schicke mir einen Wochenbericht",
+                        "Schicke mir meinen Wochenbericht"
+                    ]
+                },
+                {
+                    "name": "DeleteNamedElementFromListIntent",
+                    "slots": [
+                        {
+                            "name": "elementName",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Entferne {elementName}",
+                        "Entferne {elementName} von der Liste",
+                        "Entferne {elementName} aus der Liste",
+                        "Lösche {elementName}",
+                        "Lösche {elementName} von der Liste",
+                        "Lösche {elementName} aus der Liste"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "liste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "aufgabenliste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "checkliste",
+                                "synonyms": [
+                                    "liste zum abhaken",
+                                    "todo liste",
+                                    "todlist"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "patientenliste",
+                                "synonyms": [
+                                    "liste für einen patienten"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plfegerliste",
+                                "synonyms": [
+                                    "liste für einen pleger"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CreateListIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.958281061440"
+                    },
+                    "slots": [
+                        {
+                            "name": "list_type",
+                            "type": "LIST_TYPE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "WhatsOnThisListIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                },
+                {
+                    "name": "DeleteListIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.724288771802"
+                    },
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "SKILL_RESPONSE"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.958281061440",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, du willst also eine neue Liste erstellen?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.724288771802",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Soll die Liste wirklich gelöscht werden?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.724288771802.1373890198830",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Welchen titel hat die liste von {name} die du löschen möchtest?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.724288771802.1169593846110",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Es scheint mehrere Listen mit dem Titel {titel} zu geben. Kannst du mir den namen der person sagen zu der diese liste gehört?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.724288771802.1169593846110",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ich soll also {name}  liste mit dem titel {titel}  löschen, ist das so richtig?"
+                    }
+                ]
+            }
+        ]
+    }
+}

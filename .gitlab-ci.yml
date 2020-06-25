@@ -1,0 +1,12 @@
+image: maven:3.3.9-jdk-8
+
+java:
+  stage: test
+  script:
+  - mvn verify
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent compile test -Pdev sonar:sonar -Dsonar.projectKey=swe-Do-14 -Dsonar.projectName=swe-Do-14 -Dsonar.host.url=https://ec.cs.hm.edu/
+  artifacts:
+    reports:
+      junit:
+        - target/surefire-reports/TEST-*.xml
+        - target/failsafe-reports/TEST-*.xml
